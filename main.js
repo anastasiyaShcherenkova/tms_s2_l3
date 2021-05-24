@@ -15,7 +15,7 @@
  console.log(`сейчас %c${new Date}`, 'color:red'); /*сейчас (тут будет день недели, месяц, дата, время красным цветом) */
   
   
- /**  
+ /** 
   * Конкатенируйте все слова в массиве, которые начинаются с буквы b и выведите результат в консоль  
   * */ 
   
@@ -74,6 +74,27 @@
      }
  }
 
+ /** 
+ * Дан пустой массив, создайте матрицу 5х5, заполните её числами по порядку, начиная с 1цы (1, 2, 3, ... 25)
+ */
+
+
+const makeMatrix = (a, b) => {
+    let matrix = [];
+    let k = 0;
+    for (let i = 0; i < a; i++) {
+        matrix[i] = [];
+        for (let j = 0; j < b; j++) {
+            matrix[i][j] = k;
+            k++;
+        }
+    }  
+    return matrix;
+}
+
+const matrix67 = makeMatrix(6,7);
+console.log(makeMatrix(6, 7));
+
 // let k = 1;
 
 //  for (let i = 0; i < 5; i++) {
@@ -121,4 +142,4 @@ for (let j = 0; j < n; j++) {
     matrix3[6][j] = figure[5];
 }
 
-console.log(matrix3);
+console.log(matrix3)
